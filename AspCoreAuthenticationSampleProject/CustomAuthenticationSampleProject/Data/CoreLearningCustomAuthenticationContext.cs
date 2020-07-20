@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using CustomAuthenticationSampleProject.Entites;
+using CustomAuthenticationSampleProject.Entities;
 
 namespace CustomAuthenticationSampleProject.Data
 {
@@ -17,6 +18,11 @@ namespace CustomAuthenticationSampleProject.Data
         }
 
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<UserRole> UserRole { get; set; }
+        public virtual DbSet<Permission> Permission { get; set; }
+        public virtual DbSet<RolePermission> RolePermissions { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

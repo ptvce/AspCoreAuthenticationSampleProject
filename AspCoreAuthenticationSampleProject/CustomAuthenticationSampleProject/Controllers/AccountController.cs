@@ -52,7 +52,7 @@ namespace CustomAuthenticationSampleProject.Controllers
                 {
                     new Claim(ClaimTypes.Name, model.UserName),
                     new Claim("FullName", model.UserName),
-                    new Claim(ClaimTypes.Role, "Administrator"),
+                    new Claim(ClaimTypes.Role, "1"), // read from db user role table
                 };
 
             var claimsIdentity = new ClaimsIdentity(

@@ -6,11 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CustomAuthenticationSampleProject.Controllers.Base
 {
-    public class CityController : Controller
-{
-    public IActionResult Index()
+    public class CityController : BaseController
     {
-        return View("~/Views/Base/City/Index.cshtml");
+        public IActionResult Index()
+        {
+            return View("~/Views/Base/City/Index.cshtml");
+        }
+        public IActionResult Details()
+        {
+            return View("~/Views/Base/City/Index.cshtml");
+        }
     }
-}
 }
