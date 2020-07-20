@@ -32,6 +32,7 @@
     <Folder Include="Areas\Supplier\Data\" />
     <Folder Include="Areas\Supplier\Models\" />
     <Folder Include="Areas\Supplier\Views\" />
+    <Folder Include="wwwroot\files\" />
   </ItemGroup>
 
 </Project>

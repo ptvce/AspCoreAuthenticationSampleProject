@@ -4,14 +4,16 @@ using CustomAuthenticationSampleProject.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CustomAuthenticationSampleProject.Migrations
 {
     [DbContext(typeof(CoreLearningCustomAuthenticationContext))]
-    partial class CoreLearningCustomAuthenticationContextModelSnapshot : ModelSnapshot
+    [Migration("20200720091720_add-thumbnail-and-thumbnailurl-fields")]
+    partial class addthumbnailandthumbnailurlfields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,9 +39,6 @@ namespace CustomAuthenticationSampleProject.Migrations
 
                     b.Property<byte[]>("Thumbnail")
                         .HasColumnType("varbinary(max)");
-
-                    b.Property<string>("ThumbnailFileExtention")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ThumbnailUrl")
                         .HasColumnType("nvarchar(max)");

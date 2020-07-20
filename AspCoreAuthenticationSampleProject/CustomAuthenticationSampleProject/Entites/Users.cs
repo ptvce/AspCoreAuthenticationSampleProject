@@ -10,5 +10,8 @@ namespace CustomAuthenticationSampleProject.Entites
         public string Password { get; set; }
         public Guid PasswordSalt { get; set; }
         public bool IsActive { get; set; }
+        public byte[] Thumbnail { get; set; }
+        public string ThumbnailUrl { get; set; }
+        public string ThumbnailFileExtention { get; set; }
     }
 }
